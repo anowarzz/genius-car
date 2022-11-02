@@ -31,7 +31,7 @@ const menuItems = <>
     </ul>
   </div>
   <div className="navbar-end">
-  <button className="btn btn-outline btn-warning">Appointment</button>
+  <button className="btn btn-outline border-brightRed hover:bg-brightRed hover:border-none">Appointment</button>
   </div>
 </div>
     );
