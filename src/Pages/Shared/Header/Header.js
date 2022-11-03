@@ -25,7 +25,7 @@ const menuItems = <>
       </ul>
     </div>
     <Link to='/' className="btn btn-ghost normal-case text-xl">
-    <img src={logo} alt="" />
+    <img src={logo} alt="" className='w-16  md:w-20 lg:w-auto'/>
         </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -34,7 +34,7 @@ const menuItems = <>
     </ul>
   </div>
   <div className="navbar-end">
-  <button className="btn btn-outline border-brightRed hover:bg-brightRed hover:border-none">Appointment</button>
+  <button className="btn p-1 md:p-2 lg:p-3 btn-outline border-brightRed hover:bg-brightRed hover:border-none">Appointment</button>
   </div>
 </div>
     );

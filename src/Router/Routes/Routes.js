@@ -1,4 +1,3 @@
-import { Children } from "react"
 import { createBrowserRouter } from "react-router-dom"
 import Main from "../../layout/Main"
 import Checkout from "../../Pages/Checkout/Checkout"
@@ -25,8 +24,10 @@ const router = createBrowserRouter([
                 element: <SignUp />
             }, 
             {
-                path:'/checkout:id',
-                element: <Checkout />
+               path: '/checkout/:id',
+               element: <Checkout />,
+               loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+          
             }
         ]
     
