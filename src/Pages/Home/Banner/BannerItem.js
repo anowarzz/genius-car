@@ -34,8 +34,8 @@ const {image, id, prev, next} = slide
             </div>
         
             <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
-              <a href={`#slide${prev}`} className="btn btn-circle mr-5">❮</a> 
-              <a href={`#slide${next}`} className="btn btn-circle bg-red-500">❯</a>
+              <a href={`#slide${prev}`} className="btn btn-circle mr-5 hover:bg-brightRed">❮</a> 
+              <a href={`#slide${next}`} className="btn btn-circle bg-brightRed">❯</a>
             </div>
           </div> 
     );

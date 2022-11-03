@@ -1,6 +1,5 @@
-import userEvent from "@testing-library/user-event";
 import React, { useContext, useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import img from "../../assets/images/login/login.svg";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
@@ -18,7 +17,7 @@ const handleLogin = (event) => {
     const email = form.email.value;
     const password = form.password.value;
 
-
+ 
 
     login(email, password)
     .then(result => {

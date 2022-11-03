@@ -1,6 +1,6 @@
 import {React, useContext, useState } from 'react';
-import toast, { Toaster } from 'react-hot-toast';
-import { Link, useAsyncValue, useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
+import { Link,  useNavigate } from 'react-router-dom';
 import img from "../../assets/images/login/login.svg";
 import {AuthContext} from '../../context/AuthProvider/AuthProvider'
 

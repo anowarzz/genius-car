@@ -10,12 +10,14 @@ const {img, price, title} = service
         <figure><img src=
         {img} alt="img"/></figure>
         <div className="card-body">
-          <h2 className="card-title text-2xl text-center"><span className='text-center'>{title}</span></h2>
-          <div className='flex'>
+
+          <h2 className="card-title text-2xl text-center"> {title}</h2>
+
+          <div className='flex justify-center items-center'>
           <p className='text-brightRed text-xl font-bold'>Price : ${price}</p>
-          <button className="btn-sm">
-             
-                <BsArrowRightCircle  className='text-xl text-brightRed rounded-full hover:border hover:text-2xl' />
+          <button className="btn btn-outline border-brightRed hover:bg-brightRed btn-sm hover:border-none">
+            <p className='inline'>Get Service</p>
+                <BsArrowRightCircle  className='text-xl ml-1 text-brightRed inline' />
                
             </button>
           </div>
