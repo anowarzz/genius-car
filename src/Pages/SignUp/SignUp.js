@@ -1,12 +1,16 @@
-import {React, useContext } from 'react';
-import { Link } from 'react-router-dom';
+import {React, useContext, useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
+import { Link, useAsyncValue, useNavigate } from 'react-router-dom';
 import img from "../../assets/images/login/login.svg";
 import {AuthContext} from '../../context/AuthProvider/AuthProvider'
 
 const SignUp = () => {
 
 const {createUser} = useContext(AuthContext)
+const [error, setError] = useState('')
 
+
+const navigate = useNavigate();
 
     const handleSignUp = (event) => {
         event.preventDefault();
@@ -19,8 +23,12 @@ const {createUser} = useContext(AuthContext)
         .then(result => {
             const user = result.user;
             console.log(user);
+            form.reset();
+            toast.success("Registration Successful")
+            navigate('/')
+
         })
-        .catch(err => console.error(err))
+        .catch(err => setError(err.message))
     }
     
 
@@ -83,7 +91,10 @@ const {createUser} = useContext(AuthContext)
                 className="input input-bordered" required
               />
             </div>
-           
+            { 
+              error &&
+              <p className="text-brightRed font-bold text-center mb-3">{error}</p>
+            }
             <div className="form-control mt-6">
               <input
                 className="btn bg-brightRed border-none"

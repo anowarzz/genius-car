@@ -2,7 +2,6 @@ import React from 'react';
 
 const ProductCard = ({product}) => {
 
-console.log(product);
 const {title, img, ratings,price} = product;
 
 
