@@ -4,42 +4,42 @@
     "product_id": "01",
     "title": "Car Engine Plug",
     "img": "https://i.ibb.co/RcJBBW2/engine-plug.png",
-    "ratings": "https://i.ibb.co/RcJBBW2/engine-plug.png",
+    "ratings": "https://i.ibb.co/y0Q92Sj/ratings.png",
     "price": "30.00"
   },
   {
     "product_id": "02",
     "title": "Car Air Filter",
     "img": "https://i.ibb.co/PwNZh5w/air-filter.png",
-    "ratings": "https://i.ibb.co/RcJBBW2/engine-plug.png",
+    "ratings":"https://i.ibb.co/y0Q92Sj/ratings.png",
     "price": "30.00"
   },
   {
     "product_id": "03",
     "title": "Car Cool Tier ",
     "img": "https://i.ibb.co/G0FKKnn/cool-tier.png",
-    "ratings": "https://i.ibb.co/RcJBBW2/engine-plug.png",
+    "ratings": "https://i.ibb.co/y0Q92Sj/ratings.png",
     "price": "30.00"
   },
   {
     "product_id": "04",
     "title": "Car Extreme Runner",
     "img": "https://i.ibb.co/D99nLKZ/extreme-runner.png",
-    "ratings": "https://i.ibb.co/RcJBBW2/engine-plug.png",
+    "ratings": "https://i.ibb.co/y0Q92Sj/ratings.png",
     "price": "30.00"
   },
   {
     "product_id": "05",
     "title": "Car Engine Part",
     "img": "https://i.ibb.co/H2cRBQ9/engine-part.png",
-    "ratings": "https://i.ibb.co/RcJBBW2/engine-plug.png",
+    "ratings": "https://i.ibb.co/y0Q92Sj/ratings.png",
     "price": "30.00"
   },
   {
     "product_id": "06",
     "title": "Car Voltage Battery",
     "img": "https://i.ibb.co/B2QWKNP/voltage-battery.png",
-    "ratings": "https://i.ibb.co/RcJBBW2/engine-plug.png",
+    "ratings": "https://i.ibb.co/y0Q92Sj/ratings.png",
     "price": "30.00"
   }
 ]

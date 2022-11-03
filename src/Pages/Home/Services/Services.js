@@ -13,7 +13,7 @@ useEffect( () => {
 
     return (
         <div>
-            <div className='text-center'>
+            <div className='text-center mb-14'>
                 <p className='text-2xl font-bold text-brightRed'>Services</p>
         <h2 className='text-5xl font-semibold mt-5' >Our Service Area</h2>
         <p className='p-6'>
@@ -30,7 +30,7 @@ useEffect( () => {
             </div>
 
             <div className='text-center mt-12 mb-32'>
-                <button className='btn btn-outline border-brightRed text-brightRed'>
+                <button className='btn btn-outline border-brightRed text-brightRed hover:bg-brightRed hover:border-none'>
                More Services
                 </button>
             </div>
