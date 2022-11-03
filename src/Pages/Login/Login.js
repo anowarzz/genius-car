@@ -18,14 +18,14 @@ const handleLogin = (event) => {
         <div className="text-center lg:text-left">
           <img src={img} className="w-3/4" alt="" />
         </div>
-        <div className="card  w-full border border-gray-200 shadow-md">
+        <div className="card py-20 w-full border border-gray-200 shadow-md">
           <h1 className="text-3xl md:text-5xl text-center font-bold">Login</h1>
           <form onSubmit={handleLogin} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-bold">Email</span>
               </label>
-              <input
+              <input name="email" 
                 type="text"
                 placeholder="Your Email"
                 className="input input-bordered"
@@ -35,8 +35,8 @@ const handleLogin = (event) => {
               <label className="label">
                 <span className="label-text font-bold">Password</span>
               </label>
-              <input
-                type="text"
+              <input name="password" 
+                type="password"
                 placeholder="Your Password"
                 className="input input-bordered"
               />
@@ -60,6 +60,8 @@ const handleLogin = (event) => {
               />
             </div>
           </form>
+          <p className="text-center">New To Genius Car ? <Link to='/signup' className="text-brightRed font-bold hover:link pl-3">
+         Sign Up </Link> </p>
         </div>
       </div>
     </div>

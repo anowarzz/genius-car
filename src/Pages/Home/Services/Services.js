@@ -15,7 +15,7 @@ useEffect( () => {
         <div>
             <div className='text-center'>
                 <p className='text-2xl font-bold text-brightRed'>Services</p>
-        <h2 className='text-5xl font-semibold' >Our Service Area</h2>
+        <h2 className='text-5xl font-semibold mt-5' >Our Service Area</h2>
         <p className='p-6'>
         The majority have suffered alteration in some form, by injected humour <br /> or randomised words which don't look even slightly believable. 
         </p>
@@ -27,6 +27,12 @@ useEffect( () => {
                 service = {service}
                 />)
                }
+            </div>
+
+            <div className='text-center mt-12 mb-32'>
+                <button className='btn btn-outline border-brightRed text-brightRed'>
+               More Services
+                </button>
             </div>
         </div>
     );
