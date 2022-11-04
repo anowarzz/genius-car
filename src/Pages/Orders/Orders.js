@@ -10,7 +10,7 @@ const [orders, setOrder] = useState([])
 
 
 useEffect(() => {
-    fetch(`http://localhost:5000/orders?email=${user.email}`)
+    fetch(`http://localhost:5000/orders?email=${user?.email}`)
     .then(res => res.json())
     .then(data => setOrder(data))
 }, [user?.email])
@@ -36,9 +36,9 @@ console.log(orders);
           </label>
         </th>
         <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
-        <th></th>
+        <th>Price</th>
+        <th>Details</th>
+        <th>Message</th>
       </tr>
     </thead>
     <tbody>
