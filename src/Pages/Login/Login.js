@@ -65,7 +65,7 @@ const handleLogin = (event) => {
             <div className="text-end mt-5">
             <label className="">
               <Link
-                to="/"
+                to=""
                 alt=""
                 className="label-text-alt link link-hover text-center"
               >
