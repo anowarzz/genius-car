@@ -110,7 +110,7 @@ const handlePlaceOrder = (event) => {
             <input
               type="submit"
               value="Place Order"
-              className="btn bg-brightRed my-8 border-none"
+              className="btn bg-brightRed my-8 border-none md:w-3/5"
             />
           </div>
         </form>
