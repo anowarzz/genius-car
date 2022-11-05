@@ -1,36 +1,60 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from "../../assets/images/login/login.svg";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 
 const Login = () => {
 
-  const {login} = useContext(AuthContext)
+  useEffect(() => {
+    //  scroll to top on page load
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, []);
 
+  // Context
+  const {login, passwordChange} = useContext(AuthContext)
+// states
   const [error, setError] = useState('')
+  const [email, setEmail] = useState('')
+  
+  // location  
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || '/' ;
 
-
+  // Login Handler
 const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
-
+    setEmail(email)
  
 
     login(email, password)
     .then(result => {
      const user = result.user;
       console.log(user);
+      navigate(from, {replace: true})
       form.reset();
       toast.success("Login Successful")
     })
     .catch(err => setError(err.message))
-
-
 }
 
+const handlePasswordChange = () => {
+  
+  
+  if(email){
+    console.log("Hello clicked");
+    passwordChange(email)
+    toast.success("Password Reset Email Send")
+  }
+  else{
+    toast.error("Please Enter A Valid Email")
+  }
+ 
+}
 
   return (
     <div className="hero w-full my-20">
@@ -67,9 +91,9 @@ const handleLogin = (event) => {
               <Link
                 to=""
                 alt=""
-                className="label-text-alt link link-hover text-center"
+                className="label-text-alt text-center"
               >
-                Forgot password?
+                <button onClick={handlePasswordChange} className="hover:link">Forgot password?</button>
               </Link>
             </label>
             </div>
