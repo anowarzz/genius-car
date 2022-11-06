@@ -56,16 +56,11 @@ const handleLogin = (event) => {
         
         // Local storage is the easiest but not the best place to store JWT token 
         localStorage.setItem('genius-token', data.token);
-      })
-
-
-
-
-
-
-      // navigate(from, {replace: true})
-      // form.reset();
+        
+      navigate(from, {replace: true})
+      form.reset();
       toast.success("Login Successful")
+      })
     })
     .catch(err => setError(err.message))
 }
