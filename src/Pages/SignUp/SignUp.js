@@ -17,8 +17,13 @@ const navigate = useNavigate();
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value
-        const password = form.password.value
+        const password = form.password.value;
+        const confirm = form.confirm.value;
 
+
+          if(password !== confirm){
+             return setError("Your Password Did Not Match")
+          }
         createUser(email, password)
         .then(result => {
             const user = result.user;

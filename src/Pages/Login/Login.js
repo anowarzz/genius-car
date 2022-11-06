@@ -34,9 +34,37 @@ const handleLogin = (event) => {
     login(email, password)
     .then(result => {
      const user = result.user;
-      console.log(user);
-      navigate(from, {replace: true})
-      form.reset();
+     
+
+      const currentUser = {
+        email: user.email
+      } 
+
+      console.log(currentUser);
+      
+      // Get jwt token
+      fetch('http://localhost:5000/jwt', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(currentUser)
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        
+        // Local storage is the easiest but not the best place to store JWT token 
+        localStorage.setItem('genius-token', data.token);
+      })
+
+
+
+
+
+
+      // navigate(from, {replace: true})
+      // form.reset();
       toast.success("Login Successful")
     })
     .catch(err => setError(err.message))
@@ -45,15 +73,15 @@ const handleLogin = (event) => {
 const handlePasswordChange = () => {
   
   
-  if(email){
-    console.log("Hello clicked");
-    passwordChange(email)
-    toast.success("Password Reset Email Send")
-  }
-  else{
-    toast.error("Please Enter A Valid Email")
-  }
- 
+// if((!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(email)){
+//   return toast.error("Please Enter A Valid Email")
+// }
+
+//   else{
+
+//     passwordChange(email)
+//     toast.success("Password Reset Email Send")
+//   }
 }
 
   return (
@@ -91,7 +119,7 @@ const handlePasswordChange = () => {
               <Link
                 to=""
                 alt=""
-                className="label-text-alt text-center"
+                className="label-text-alt  text-center"
               >
                 <button onClick={handlePasswordChange} className="hover:link">Forgot password?</button>
               </Link>
