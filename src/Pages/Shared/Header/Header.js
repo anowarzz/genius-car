@@ -29,7 +29,7 @@ const handleLogOut = () => {
           </li>
 
           <li className="font-semibold">
-           <button onClick={handleLogOut} className="btn btn-ghost text-gray-50">Sign Out</button>
+           <button onClick={handleLogOut} className="btn btn-ghost">Sign Out</button>
           </li>
         </>
        : 

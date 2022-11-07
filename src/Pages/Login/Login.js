@@ -126,7 +126,7 @@ const handlePasswordChange = () => {
             }
             <div className="form-control mt-6">
               <input
-                className="btn bg-brightRed border-none"
+                className="btn bg-red-500 border-none"
                 type="submit"
                 value="Login"
               />
